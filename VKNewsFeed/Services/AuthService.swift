@@ -31,6 +31,10 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     weak var delegate: AuthServiceDelegate?
     
+    var token: String? {
+        return VKSdk.accessToken().accessToken
+    }
+    
     func wakeUpSession() {
         let scope = ["offline"]
         
@@ -46,7 +50,6 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
                 delegate?.authServiceSignIn()
            default:
                 delegate?.authServiceSignInDidFail()
-                
             }
         }
     }

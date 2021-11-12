@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1906792E273D45560009BA44 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1906792D273D45560009BA44 /* FeedViewController.storyboard */; };
+		19A84C71273E6E30003138AD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A84C70273E6E30003138AD /* NetworkService.swift */; };
+		19A84C73273E6ED4003138AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A84C72273E6ED4003138AD /* API.swift */; };
 		19FBEB2F273D314D0085B2E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB2E273D314D0085B2E9 /* AppDelegate.swift */; };
 		19FBEB31273D314D0085B2E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB30273D314D0085B2E9 /* SceneDelegate.swift */; };
 		19FBEB33273D314D0085B2E9 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB32273D314D0085B2E9 /* AuthViewController.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		1906792D273D45560009BA44 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
+		19A84C70273E6E30003138AD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		19A84C72273E6ED4003138AD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		19FBEB2B273D314D0085B2E9 /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FBEB2E273D314D0085B2E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19FBEB30273D314D0085B2E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				19FBEB47273D38E80085B2E9 /* AuthService.swift */,
+				19A84C70273E6E30003138AD /* NetworkService.swift */,
+				19A84C72273E6ED4003138AD /* API.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -204,7 +210,9 @@
 				19FBEB2F273D314D0085B2E9 /* AppDelegate.swift in Sources */,
 				19FBEB4D273D44940085B2E9 /* FeedViewController.swift in Sources */,
 				19FBEB31273D314D0085B2E9 /* SceneDelegate.swift in Sources */,
+				19A84C71273E6E30003138AD /* NetworkService.swift in Sources */,
 				19FBEB48273D38E80085B2E9 /* AuthService.swift in Sources */,
+				19A84C73273E6ED4003138AD /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
