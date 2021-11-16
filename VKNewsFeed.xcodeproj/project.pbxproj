@@ -18,6 +18,7 @@
 		1906C26C274282CB005C5124 /* NewsfeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1906C26B274282CB005C5124 /* NewsfeedCell.xib */; };
 		193B6CC127426D4900227BBD /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193B6CC027426D4900227BBD /* FeedResponse.swift */; };
 		193B6CC327426FCD00227BBD /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193B6CC227426FCD00227BBD /* NetworkDataFetcher.swift */; };
+		1961B9A02743C0650088D5B7 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961B99F2743C0650088D5B7 /* WebImageView.swift */; };
 		19A84C71273E6E30003138AD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A84C70273E6E30003138AD /* NetworkService.swift */; };
 		19A84C73273E6ED4003138AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A84C72273E6ED4003138AD /* API.swift */; };
 		19FBEB2F273D314D0085B2E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB2E273D314D0085B2E9 /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 		1906C26B274282CB005C5124 /* NewsfeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsfeedCell.xib; sourceTree = "<group>"; };
 		193B6CC027426D4900227BBD /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 		193B6CC227426FCD00227BBD /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		1961B99F2743C0650088D5B7 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		19A84C70273E6E30003138AD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		19A84C72273E6ED4003138AD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		19FBEB2B273D314D0085B2E9 /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1960DBA52743BF23008502D4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				19FBEB3C273D31500085B2E9 /* Info.plist */,
+				19FBEB39273D31500085B2E9 /* LaunchScreen.storyboard */,
+				19FBEB37273D31500085B2E9 /* Assets.xcassets */,
+				1961B99F2743C0650088D5B7 /* WebImageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		19FBEB22273D314D0085B2E9 = {
 			isa = PBXGroup;
 			children = (
@@ -149,9 +162,7 @@
 				19FBEB4B273D42CA0085B2E9 /* Services */,
 				1906792F273D45750009BA44 /* Auth */,
 				1906C257274275C2005C5124 /* Newsfeed */,
-				19FBEB37273D31500085B2E9 /* Assets.xcassets */,
-				19FBEB39273D31500085B2E9 /* LaunchScreen.storyboard */,
-				19FBEB3C273D31500085B2E9 /* Info.plist */,
+				1960DBA52743BF23008502D4 /* Helpers */,
 			);
 			path = VKNewsFeed;
 			sourceTree = "<group>";
@@ -259,6 +270,7 @@
 				19FBEB31273D314D0085B2E9 /* SceneDelegate.swift in Sources */,
 				19A84C71273E6E30003138AD /* NetworkService.swift in Sources */,
 				1906C262274275EE005C5124 /* NewsfeedModels.swift in Sources */,
+				1961B9A02743C0650088D5B7 /* WebImageView.swift in Sources */,
 				193B6CC327426FCD00227BBD /* NetworkDataFetcher.swift in Sources */,
 				1906C260274275EE005C5124 /* NewsfeedWorker.swift in Sources */,
 				19FBEB48273D38E80085B2E9 /* AuthService.swift in Sources */,
@@ -407,7 +419,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 562JMNMA93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VKNewsFeed/Info.plist;
+				INFOPLIST_FILE = VKNewsFeed/Helpers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -434,7 +446,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 562JMNMA93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VKNewsFeed/Info.plist;
+				INFOPLIST_FILE = VKNewsFeed/Helpers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
