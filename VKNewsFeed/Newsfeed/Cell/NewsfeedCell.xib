@@ -130,7 +130,7 @@
                 <outlet property="nameLabel" destination="vEC-Uw-2N6" id="vdK-Er-ueb"/>
                 <outlet property="postLabel" destination="ARf-cO-zo3" id="C0w-hY-O7n"/>
                 <outlet property="sharesLabel" destination="jo7-bj-byF" id="opJ-fm-tnZ"/>
-                <outlet property="veiwLabel" destination="uWL-Al-dhu" id="UQP-UQ-Otg"/>
+                <outlet property="veiwsLabel" destination="uWL-Al-dhu" id="LfS-AA-207"/>
             </connections>
             <point key="canvasLocation" x="113.768115942029" y="34.821428571428569"/>
         </tableViewCell>

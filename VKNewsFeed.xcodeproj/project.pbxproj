@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1906792E273D45560009BA44 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1906792D273D45560009BA44 /* FeedViewController.storyboard */; };
 		1906C25F274275EE005C5124 /* NewsfeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906C258274275EE005C5124 /* NewsfeedPresenter.swift */; };
 		1906C260274275EE005C5124 /* NewsfeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906C259274275EE005C5124 /* NewsfeedWorker.swift */; };
 		1906C261274275EE005C5124 /* NewsfeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906C25A274275EE005C5124 /* NewsfeedRouter.swift */; };
@@ -30,7 +29,6 @@
 		19FBEB45273D36C20085B2E9 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19FBEB43273D36C20085B2E9 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19FBEB48273D38E80085B2E9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB47273D38E80085B2E9 /* AuthService.swift */; };
 		19FBEB4A273D3A140085B2E9 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FBEB49273D3A140085B2E9 /* AuthViewController.storyboard */; };
-		19FBEB4D273D44940085B2E9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB4C273D44940085B2E9 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,7 +46,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1906792D273D45560009BA44 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
 		1906C258274275EE005C5124 /* NewsfeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedPresenter.swift; sourceTree = "<group>"; };
 		1906C259274275EE005C5124 /* NewsfeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedWorker.swift; sourceTree = "<group>"; };
 		1906C25A274275EE005C5124 /* NewsfeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedRouter.swift; sourceTree = "<group>"; };
@@ -72,7 +69,6 @@
 		19FBEB43273D36C20085B2E9 /* VKSdkFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VKSdkFramework.xcframework; path = Carthage/Build/VKSdkFramework.xcframework; sourceTree = "<group>"; };
 		19FBEB47273D38E80085B2E9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		19FBEB49273D3A140085B2E9 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
-		19FBEB4C273D44940085B2E9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +149,6 @@
 				19FBEB4B273D42CA0085B2E9 /* Services */,
 				1906792F273D45750009BA44 /* Auth */,
 				1906C257274275C2005C5124 /* Newsfeed */,
-				19FBEB50273D44DF0085B2E9 /* FeedViewController */,
 				19FBEB37273D31500085B2E9 /* Assets.xcassets */,
 				19FBEB39273D31500085B2E9 /* LaunchScreen.storyboard */,
 				19FBEB3C273D31500085B2E9 /* Info.plist */,
@@ -179,15 +174,6 @@
 				19A84C72273E6ED4003138AD /* API.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		19FBEB50273D44DF0085B2E9 /* FeedViewController */ = {
-			isa = PBXGroup;
-			children = (
-				19FBEB4C273D44940085B2E9 /* FeedViewController.swift */,
-				1906792D273D45560009BA44 /* FeedViewController.storyboard */,
-			);
-			path = FeedViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +240,6 @@
 				1906C267274279DC005C5124 /* NewsfeedViewController.storyboard in Resources */,
 				19FBEB38273D31500085B2E9 /* Assets.xcassets in Resources */,
 				1906C26C274282CB005C5124 /* NewsfeedCell.xib in Resources */,
-				1906792E273D45560009BA44 /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +255,6 @@
 				19FBEB33273D314D0085B2E9 /* AuthViewController.swift in Sources */,
 				19FBEB2F273D314D0085B2E9 /* AppDelegate.swift in Sources */,
 				1906C25F274275EE005C5124 /* NewsfeedPresenter.swift in Sources */,
-				19FBEB4D273D44940085B2E9 /* FeedViewController.swift in Sources */,
 				1906C261274275EE005C5124 /* NewsfeedRouter.swift in Sources */,
 				19FBEB31273D314D0085B2E9 /* SceneDelegate.swift in Sources */,
 				19A84C71273E6E30003138AD /* NetworkService.swift in Sources */,
