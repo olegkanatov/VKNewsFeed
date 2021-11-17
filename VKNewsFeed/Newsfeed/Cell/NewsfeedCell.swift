@@ -43,13 +43,13 @@ class NewsfeedCell: UITableViewCell {
     
     @IBOutlet weak var iconImageView: WebImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var dateLAbel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var postLabel: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var sharesLabel: UILabel!
     @IBOutlet weak var postImageView: WebImageView!
-    @IBOutlet weak var veiwsLabel: UILabel!
+    @IBOutlet weak var viewsLabel: UILabel!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var bottomView: UIView!
     
@@ -76,12 +76,12 @@ class NewsfeedCell: UITableViewCell {
         
         iconImageView.set(imageURL: viewModel.iconUrlString)
         nameLabel.text = viewModel.name
-        dateLAbel.text = viewModel.date
+        dateLabel.text = viewModel.date
         postLabel.text = viewModel.text
         likesLabel.text = viewModel.likes
         commentsLabel.text = viewModel.comments
         sharesLabel.text = viewModel.shares
-        veiwsLabel.text = viewModel.views
+        viewsLabel.text = viewModel.views
         
         postLabel.frame = viewModel.sizes.postLabelFrame
         postImageView.frame = viewModel.sizes.attachmentFrame

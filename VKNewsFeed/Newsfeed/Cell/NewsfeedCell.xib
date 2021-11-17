@@ -147,14 +147,14 @@
                 <outlet property="bottomView" destination="7i3-F8-mfe" id="9o8-jS-M3n"/>
                 <outlet property="cardView" destination="L3M-07-rdt" id="vUm-ci-1fh"/>
                 <outlet property="commentsLabel" destination="BIZ-bo-yyX" id="Dk0-hW-TCN"/>
-                <outlet property="dateLAbel" destination="nVe-xI-aem" id="DIb-gJ-6j5"/>
+                <outlet property="dateLabel" destination="nVe-xI-aem" id="DIb-gJ-6j5"/>
                 <outlet property="iconImageView" destination="sKH-y7-OrX" id="6Si-nr-iP9"/>
                 <outlet property="likesLabel" destination="wVo-XL-hT1" id="lkr-3d-uXq"/>
                 <outlet property="nameLabel" destination="vEC-Uw-2N6" id="vdK-Er-ueb"/>
                 <outlet property="postImageView" destination="K5u-ae-4nc" id="4gp-VL-UG7"/>
                 <outlet property="postLabel" destination="ARf-cO-zo3" id="C0w-hY-O7n"/>
                 <outlet property="sharesLabel" destination="jo7-bj-byF" id="opJ-fm-tnZ"/>
-                <outlet property="veiwsLabel" destination="uWL-Al-dhu" id="LfS-AA-207"/>
+                <outlet property="viewsLabel" destination="uWL-Al-dhu" id="LfS-AA-207"/>
             </connections>
             <point key="canvasLocation" x="113.768115942029" y="34.821428571428569"/>
         </tableViewCell>

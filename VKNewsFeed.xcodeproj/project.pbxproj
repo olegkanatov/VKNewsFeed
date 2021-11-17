@@ -23,6 +23,9 @@
 		19A84C73273E6ED4003138AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A84C72273E6ED4003138AD /* API.swift */; };
 		19B9F663274501A300B53C62 /* NewsfeedCellLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F662274501A300B53C62 /* NewsfeedCellLayoutCalculator.swift */; };
 		19B9F66527450B7300B53C62 /* String + Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F66427450B7300B53C62 /* String + Height.swift */; };
+		19B9F667274513F400B53C62 /* NewsfeedCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F666274513F400B53C62 /* NewsfeedCodeCell.swift */; };
+		19B9F669274517DD00B53C62 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F668274517DD00B53C62 /* Constraints.swift */; };
+		19B9F66B27451E2B00B53C62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F66A27451E2B00B53C62 /* Constants.swift */; };
 		19FBEB2F273D314D0085B2E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB2E273D314D0085B2E9 /* AppDelegate.swift */; };
 		19FBEB31273D314D0085B2E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB30273D314D0085B2E9 /* SceneDelegate.swift */; };
 		19FBEB33273D314D0085B2E9 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB32273D314D0085B2E9 /* AuthViewController.swift */; };
@@ -65,6 +68,9 @@
 		19A84C72273E6ED4003138AD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		19B9F662274501A300B53C62 /* NewsfeedCellLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedCellLayoutCalculator.swift; sourceTree = "<group>"; };
 		19B9F66427450B7300B53C62 /* String + Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Height.swift"; sourceTree = "<group>"; };
+		19B9F666274513F400B53C62 /* NewsfeedCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedCodeCell.swift; sourceTree = "<group>"; };
+		19B9F668274517DD00B53C62 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		19B9F66A27451E2B00B53C62 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		19FBEB2B273D314D0085B2E9 /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FBEB2E273D314D0085B2E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19FBEB30273D314D0085B2E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,8 @@
 				1906C26927428292005C5124 /* NewsfeedCell.swift */,
 				19B9F662274501A300B53C62 /* NewsfeedCellLayoutCalculator.swift */,
 				1906C26B274282CB005C5124 /* NewsfeedCell.xib */,
+				19B9F666274513F400B53C62 /* NewsfeedCodeCell.swift */,
+				19B9F66A27451E2B00B53C62 /* Constants.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 				19FBEB37273D31500085B2E9 /* Assets.xcassets */,
 				1961B99F2743C0650088D5B7 /* WebImageView.swift */,
 				19B9F66427450B7300B53C62 /* String + Height.swift */,
+				19B9F668274517DD00B53C62 /* Constraints.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -278,6 +287,9 @@
 				19A84C71273E6E30003138AD /* NetworkService.swift in Sources */,
 				1906C262274275EE005C5124 /* NewsfeedModels.swift in Sources */,
 				19B9F663274501A300B53C62 /* NewsfeedCellLayoutCalculator.swift in Sources */,
+				19B9F66B27451E2B00B53C62 /* Constants.swift in Sources */,
+				19B9F667274513F400B53C62 /* NewsfeedCodeCell.swift in Sources */,
+				19B9F669274517DD00B53C62 /* Constraints.swift in Sources */,
 				1961B9A02743C0650088D5B7 /* WebImageView.swift in Sources */,
 				193B6CC327426FCD00227BBD /* NetworkDataFetcher.swift in Sources */,
 				1906C260274275EE005C5124 /* NewsfeedWorker.swift in Sources */,

@@ -47,6 +47,7 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
         setup()
         
         table.register(UINib(nibName: "NewsfeedCell", bundle: nil), forCellReuseIdentifier: NewsfeedCell.reuseId)
+        table.register(NewsfeedCodeCell.self, forCellReuseIdentifier: NewsfeedCodeCell.reuseId)
         
         table.separatorStyle = .none
         table.backgroundColor = .clear
@@ -76,8 +77,19 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: NewsfeedCell.reuseId, for: indexPath) as! NewsfeedCell
         
+        //-------------------------------------------------
+        // MARK: - UI with .xib
+        //-------------------------------------------------
+
+//        let cell = tableView.dequeueReusableCell(withIdentifier: NewsfeedCell.reuseId, for: indexPath) as! NewsfeedCell
+        
+        
+        //-------------------------------------------------
+        // MARK: - UI with code
+        //-------------------------------------------------
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsfeedCodeCell.reuseId, for: indexPath) as! NewsfeedCodeCell
         let cellViewModel = feedViewModel.cells[indexPath.row]
         cell.set(viewModel: cellViewModel)
         
@@ -89,5 +101,6 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cellViewModel = feedViewModel.cells[indexPath.row]
         
         return cellViewModel.sizes.totalHeight
+//        return 212
     }
 }
