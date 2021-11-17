@@ -42,6 +42,7 @@ struct FeedViewModel {
         var shares: String?
         var views: String?
         var photoAttachement: FeedCellPhotoAttachmentViewModel?
+        var sizes: FeedCellSizes
     }
     
     struct FeedCellPhotoAttachment: FeedCellPhotoAttachmentViewModel {
