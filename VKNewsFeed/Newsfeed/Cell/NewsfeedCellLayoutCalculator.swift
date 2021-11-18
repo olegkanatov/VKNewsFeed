@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Sizes: FeedCellSizes {
-
+    
     var postLabelFrame: CGRect
     var moreTextButtonFrame: CGRect
     var attachmentFrame: CGRect
@@ -19,7 +19,7 @@ struct Sizes: FeedCellSizes {
 
 protocol FeedCellLayoutCalculatorProtocol {
     
-    func sizes(postText: String?, photoAttachment: FeedCellPhotoAttachmentViewModel?, isFullSizedPost: Bool) -> FeedCellSizes
+    func sizes(postText: String?, photoAttachments: [FeedCellPhotoAttachmentViewModel], isFullSizedPost: Bool) -> FeedCellSizes
 }
 
 final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
@@ -32,7 +32,7 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
     
     
     
-    func sizes(postText: String?, photoAttachment: FeedCellPhotoAttachmentViewModel?, isFullSizedPost: Bool) -> FeedCellSizes {
+    func sizes(postText: String?, photoAttachments: [FeedCellPhotoAttachmentViewModel], isFullSizedPost: Bool) -> FeedCellSizes {
         
         let cardViewWidth = screenWidth - Constants.cardInsets.left - Constants.cardInsets.right
         
@@ -81,11 +81,16 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
         
         var attachmentFrame = CGRect(origin: CGPoint(x: 0, y: attachmentTop), size: CGSize.zero)
         
-        if let attachment = photoAttachment {
+        if let attachment = photoAttachments.first {
             let photoHeight: Float = Float(attachment.height)
             let photoWidth: Float = Float(attachment.width)
             let ratio = CGFloat(photoHeight / photoWidth)
-            attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+            
+            if photoAttachments.count == 1 {
+                attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+            } else if photoAttachments.count > 1 {
+                attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+            }
         }
         
         

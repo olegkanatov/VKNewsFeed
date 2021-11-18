@@ -18,7 +18,7 @@ protocol FeedCellViewModel {
     var comments: String? { get }
     var shares: String? { get }
     var views: String? { get }
-    var photoAttachement: FeedCellPhotoAttachmentViewModel? { get }
+    var photoAttachements: [FeedCellPhotoAttachmentViewModel] { get }
     var sizes: FeedCellSizes { get }
 }
 
@@ -88,7 +88,7 @@ class NewsfeedCell: UITableViewCell {
         postImageView.frame = viewModel.sizes.attachmentFrame
         bottomView.frame = viewModel.sizes.bottomViewFrame
         
-        if let photoAttachment = viewModel.photoAttachement {
+        if let photoAttachment = viewModel.photoAttachements.first, viewModel.photoAttachements.count == 1 {
             postImageView.set(imageURL: photoAttachment.photoUrlString)
             postImageView.isHidden = false
         } else {
