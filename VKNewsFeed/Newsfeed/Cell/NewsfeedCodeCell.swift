@@ -329,7 +329,7 @@ final class NewsfeedCodeCell: UITableViewCell {
     
     private func overlayFirstLayer() {
         
-        addSubview(cardView)
+        contentView.addSubview(cardView)
     
         cardView.fillSuperview(padding: Constants.cardInsets)
     }
