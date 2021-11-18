@@ -122,10 +122,10 @@
 		1906C26827428282005C5124 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1906C26927428292005C5124 /* NewsfeedCell.swift */,
-				19B9F662274501A300B53C62 /* NewsfeedCellLayoutCalculator.swift */,
 				1906C26B274282CB005C5124 /* NewsfeedCell.xib */,
+				1906C26927428292005C5124 /* NewsfeedCell.swift */,
 				19B9F666274513F400B53C62 /* NewsfeedCodeCell.swift */,
+				19B9F662274501A300B53C62 /* NewsfeedCellLayoutCalculator.swift */,
 				19B9F66A27451E2B00B53C62 /* Constants.swift */,
 			);
 			path = Cell;
