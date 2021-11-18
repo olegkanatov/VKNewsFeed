@@ -317,9 +317,9 @@ final class NewsfeedCodeCell: UITableViewCell {
         
         cardView.addSubview(topView)
         cardView.addSubview(postLabel)
+        cardView.addSubview(moreTextButton)
         cardView.addSubview(postImageView)
         cardView.addSubview(bottomView)
-        cardView.addSubview(moreTextButton)
         
         topView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 8).isActive = true
         topView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -8).isActive = true
@@ -330,7 +330,7 @@ final class NewsfeedCodeCell: UITableViewCell {
     private func overlayFirstLayer() {
         
         addSubview(cardView)
-        
+    
         cardView.fillSuperview(padding: Constants.cardInsets)
     }
     
