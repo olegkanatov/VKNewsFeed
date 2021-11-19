@@ -35,6 +35,11 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
         return VKSdk.accessToken().accessToken
     }
     
+    var userId: String? {
+        
+        return VKSdk.accessToken()?.userId
+    }
+    
     func wakeUpSession() {
         let scope = ["wall, friends"]
         
