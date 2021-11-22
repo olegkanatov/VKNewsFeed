@@ -32,14 +32,6 @@ final class NewsfeedCodeCell: UITableViewCell {
         return view
     }()
     
-//    let postLabel: UILabel = {
-//        let label = UILabel()
-//        label.numberOfLines = 0
-//        label.font = Constants.postLabelFont
-//        label.textColor = .black
-//        return label
-//    }()
-    
     let postLabel: UITextView = {
         let textView = UITextView()
         textView.font = Constants.postLabelFont
@@ -250,7 +242,6 @@ final class NewsfeedCodeCell: UITableViewCell {
             postImageView.isHidden = true
             galleryCollectionView.isHidden = true
         }
-        
     }
     
     private func overlayFourthLayerOnBottomViewViews() {

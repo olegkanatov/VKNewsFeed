@@ -29,9 +29,7 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
     func presentData(response: Newsfeed.Model.Response.ResponseType) {
         
         switch response {
-
         case .presentNewsfeed(let feed, let revealdedPostIds):
-            
             let cells = feed.items.map { feedItem in
                 cellViewModel(from: feedItem, profiles: feed.profiles, groups: feed.groups, revealdedPostIds: revealdedPostIds)
             }
@@ -40,15 +38,12 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
             let feedViewModel = FeedViewModel.init(cells: cells, footerTitle: footerTitle)
             
             viewController?.displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData.displayNewsfeed(feedViewModel: feedViewModel))
-            
         case .presentUserInfo(let user):
-            
             let userViewModel = UserViewModel.init(photoUrlString: user?.photo100)
             viewController?.displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData.displayUser(userViewModel: userViewModel))
         case .presentFooterLoader:
             viewController?.displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData.displayFooterLoader)
         }
-        
     }
     
     private func cellViewModel(from feedItem: FeedItem, profiles: [Profile], groups: [Group], revealdedPostIds: [Int]) -> FeedViewModel.Cell {
@@ -129,5 +124,4 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
                                                               height: photo.height)
         })
     }
-    
 }

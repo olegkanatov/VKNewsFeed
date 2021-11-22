@@ -16,6 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6R-B4-eu4" customClass="GradientView" customModule="VKNewsFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZgP-Zo-TRn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,10 +38,15 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="d6R-B4-eu4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0TY-5Z-Zd0"/>
                             <constraint firstItem="ZgP-Zo-TRn" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="34" id="Rsa-7p-nbw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZgP-Zo-TRn" secondAttribute="trailing" id="YFw-Nl-rLK"/>
+                            <constraint firstItem="d6R-B4-eu4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ZpV-f7-p3o"/>
                             <constraint firstItem="ZgP-Zo-TRn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ixS-fx-flo"/>
+                            <constraint firstItem="d6R-B4-eu4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lsi-9v-w0Q"/>
+                            <constraint firstAttribute="bottom" secondItem="d6R-B4-eu4" secondAttribute="bottom" id="ppc-pu-m2n"/>
                             <constraint firstItem="ZgP-Zo-TRn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="vir-2M-ia4"/>
                         </constraints>
                     </view>
@@ -45,6 +62,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

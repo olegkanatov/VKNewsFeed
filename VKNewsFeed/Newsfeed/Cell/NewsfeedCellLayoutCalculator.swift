@@ -30,8 +30,6 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
         self.screenWidth = screenWidth
     }
     
-    
-    
     func sizes(postText: String?, photoAttachments: [FeedCellPhotoAttachmentViewModel], isFullSizedPost: Bool) -> FeedCellSizes {
         
         let cardViewWidth = screenWidth - Constants.cardInsets.left - Constants.cardInsets.right
@@ -110,11 +108,9 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
         
         let bottomViewFrame = CGRect(origin: CGPoint(x: 0, y: bottomViewTop), size: CGSize(width: cardViewWidth, height: Constants.bottomViewHeight))
         
-        
         //-------------------------------------------------
         // MARK: - Working with totalHeight
         //-------------------------------------------------
-        
         
         let totalHeight = bottomViewFrame.maxY + Constants.cardInsets.bottom
         

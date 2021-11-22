@@ -34,6 +34,7 @@
 		19B9F66B27451E2B00B53C62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F66A27451E2B00B53C62 /* Constants.swift */; };
 		19E4664F274BAC5600032331 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E4664E274BAC5600032331 /* FooterView.swift */; };
 		19E46651274BB02300032331 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 19E46650274BB02300032331 /* Localizable.stringsdict */; };
+		19E46653274BB4F300032331 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46652274BB4F300032331 /* GradientView.swift */; };
 		19FBEB2F273D314D0085B2E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB2E273D314D0085B2E9 /* AppDelegate.swift */; };
 		19FBEB31273D314D0085B2E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB30273D314D0085B2E9 /* SceneDelegate.swift */; };
 		19FBEB33273D314D0085B2E9 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBEB32273D314D0085B2E9 /* AuthViewController.swift */; };
@@ -87,6 +88,7 @@
 		19B9F66A27451E2B00B53C62 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		19E4664E274BAC5600032331 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		19E46650274BB02300032331 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		19E46652274BB4F300032331 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		19FBEB2B273D314D0085B2E9 /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FBEB2E273D314D0085B2E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19FBEB30273D314D0085B2E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,7 +178,6 @@
 				19FBEB3C273D31500085B2E9 /* Info.plist */,
 				19FBEB39273D31500085B2E9 /* LaunchScreen.storyboard */,
 				19FBEB37273D31500085B2E9 /* Assets.xcassets */,
-				1961B99F2743C0650088D5B7 /* WebImageView.swift */,
 				19B9F66427450B7300B53C62 /* String + Height.swift */,
 				19B9F668274517DD00B53C62 /* Constraints.swift */,
 			);
@@ -198,6 +199,15 @@
 				19E4664E274BAC5600032331 /* FooterView.swift */,
 			);
 			path = FooterView;
+			sourceTree = "<group>";
+		};
+		19E46654274BB7FF00032331 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1961B99F2743C0650088D5B7 /* WebImageView.swift */,
+				19E46652274BB4F300032331 /* GradientView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		19FBEB22273D314D0085B2E9 = {
@@ -225,6 +235,7 @@
 				19FBEB4B273D42CA0085B2E9 /* Services */,
 				1906792F273D45750009BA44 /* Auth */,
 				1906C257274275C2005C5124 /* Newsfeed */,
+				19E46654274BB7FF00032331 /* Views */,
 				1960DBA52743BF23008502D4 /* Helpers */,
 			);
 			path = VKNewsFeed;
@@ -351,6 +362,7 @@
 				19A84C73273E6ED4003138AD /* API.swift in Sources */,
 				1953B58B27467E1500F32520 /* GalleryCollectionView.swift in Sources */,
 				1906C26A27428292005C5124 /* NewsfeedCell.swift in Sources */,
+				19E46653274BB4F300032331 /* GradientView.swift in Sources */,
 				1906C264274275EE005C5124 /* NewsfeedInteractor.swift in Sources */,
 				1994CD372747BC1200CC0E98 /* InsetableTextField.swift in Sources */,
 			);

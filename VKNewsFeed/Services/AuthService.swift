@@ -46,7 +46,6 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
         VKSdk.wakeUpSession(scope) { [delegate] status, error in
             
             switch status {
-                
             case .initialized:
                 print("initialized")
                 VKSdk.authorize(scope)

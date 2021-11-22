@@ -24,7 +24,6 @@ class NewsfeedInteractor: NewsfeedBusinessLogic {
         }
         
         switch request {
-            
         case .getNewsfeed:
             service?.getFeed(completion: { [weak self] revealedPostIds, feed in
                 self?.presenter?.presentData(response: Newsfeed.Model.Response.ResponseType.presentNewsfeed(feed: feed, revealedPostIds: revealedPostIds))
