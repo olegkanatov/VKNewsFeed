@@ -61,8 +61,6 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
             return postId == feedItem.postId
         }
         
-//        let isFullSized = revealdedPostIds.contains(feedItem.postId)
-        
         let sizes = cellLayoutCalculator.sizes(postText: feedItem.text, photoAttachments: photoAttachments, isFullSizedPost: isFullSized)
         
         let postText = feedItem.text?.replacingOccurrences(of: "<br>", with: "\n")
