@@ -13,7 +13,7 @@ protocol NewsfeedDisplayLogic: class {
 }
 
 class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic, NewsfeedCodeCellDelegate {
-  
+    
     var interactor: NewsfeedBusinessLogic?
     var router: (NSObjectProtocol & NewsfeedRoutingLogic)?
     
@@ -22,6 +22,11 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic, NewsfeedCo
     @IBOutlet weak var table: UITableView!
     
     private var titleView = TitleView()
+    private var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        return refreshControl
+    }()
     
     // MARK: Setup
     
@@ -47,17 +52,27 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic, NewsfeedCo
         super.viewDidLoad()
         
         setup()
+        setupTable()
         setupTopBars()
+       
+        view.backgroundColor = .blue
+        
+        interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsfeed)
+        interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getUser)
+    }
+    
+    private func setupTable() {
+        
+        let topInset: CGFloat = 8
+        table.contentInset.top = topInset
         
         table.register(UINib(nibName: "NewsfeedCell", bundle: nil), forCellReuseIdentifier: NewsfeedCell.reuseId)
         table.register(NewsfeedCodeCell.self, forCellReuseIdentifier: NewsfeedCodeCell.reuseId)
         
         table.separatorStyle = .none
         table.backgroundColor = .clear
-        view.backgroundColor = .blue
         
-        interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsfeed)
-        interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getUser)
+        table.addSubview(refreshControl)
     }
     
     private func setupTopBars() {
@@ -67,6 +82,11 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic, NewsfeedCo
         self.navigationItem.titleView = titleView
     }
     
+    @objc private func refresh() {
+        
+        interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsfeed)
+    }
+    
     func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData) {
         
         switch viewModel {
@@ -74,6 +94,7 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic, NewsfeedCo
         case .displayNewsfeed(let feedViewModel):
             self.feedViewModel = feedViewModel
             table.reloadData()
+            refreshControl.endRefreshing()
         case .displayUser(let userViewModel):
             titleView.set(userViewModel: userViewModel)
         }
@@ -107,8 +128,8 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
         //-------------------------------------------------
         // MARK: - UI with .xib
         //-------------------------------------------------
-
-//        let cell = tableView.dequeueReusableCell(withIdentifier: NewsfeedCell.reuseId, for: indexPath) as! NewsfeedCell
+        
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: NewsfeedCell.reuseId, for: indexPath) as! NewsfeedCell
         
         //-------------------------------------------------
         // MARK: - UI with code
